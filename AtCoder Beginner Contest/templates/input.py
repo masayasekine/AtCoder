@@ -5,5 +5,15 @@ def main():
     N = int(input())
     S = input()
 
+    # 複数個の数値をlist型で取得
+    l = list(map(int, input().split()))
+
+    # N行1列の数値
+    A = []
+    for _ in range(N):
+        A.append(int(input()))
+
     ## N行N列の2次元配列
     A = [list(map(int, input().split())) for _ in range(N)]
+
+    A, B = map(int, input().split())
