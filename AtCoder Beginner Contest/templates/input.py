@@ -12,8 +12,12 @@ def main():
     A = []
     for _ in range(N):
         A.append(int(input()))
+    A = [list(map(int, input().split())) for _ in range(M)]
 
     ## N行N列の2次元配列
     A = [list(map(int, input().split())) for _ in range(N)]
 
     A, B = map(int, input().split())
+
+    # tupleをsetに入れる
+    P = set([tuple(map(int,input().split())) for i in range(M)])
