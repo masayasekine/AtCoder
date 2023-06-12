@@ -13,6 +13,7 @@ def main():
     for _ in range(N):
         A.append(int(input()))
     A = [list(map(int, input().split())) for _ in range(M)]
+    A = [list(map(str, input().split())) for _ in range(M)]
 
     ## N行N列の2次元配列
     A = [list(map(int, input().split())) for _ in range(N)]
