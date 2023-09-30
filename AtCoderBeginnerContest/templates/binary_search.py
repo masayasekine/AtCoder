@@ -32,3 +32,18 @@ def binary_search(sorted_list: int, search_value: int) -> bool:
         return True
 
     return False
+
+def find_smallest_satisfying_value():
+    # 二分探索の初期設定
+    lower_bound = 0  # 下限
+    upper_bound = 1000000  # 上限（適切な大きな値を設定）
+
+    while lower_bound < upper_bound:
+        mid = (lower_bound + upper_bound) // 2  # 中間値を計算
+
+        if is_condition_satisfied(mid):
+            upper_bound = mid  # 条件を満たす場合、上限を中間値に設定
+        else:
+            lower_bound = mid + 1  # 条件を満たさない場合、下限を中間値の次の値に設定
+
+    return lower_bound

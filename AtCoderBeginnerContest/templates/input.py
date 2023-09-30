@@ -25,3 +25,13 @@ A = []
 for _ in range(N):
     str_val, int_val = input().split()
     A.append((str_val, int(int_val)))
+
+
+# 実行時にインプット使用
+import io
+import sys
+_INPUT = """\
+7
+6 7 2 1 3 4 5
+"""
+sys.stdin = io.StringIO(_INPUT)
