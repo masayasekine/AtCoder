@@ -7,15 +7,13 @@ ans = []
 A.sort()
 B.sort()
 
-for i, a in enumerate(A):
-    if a > P:
-        ans.append(P * ((N - i) * M))
-        break
-    for j, b in enumerate(B):
-        if a + b < P:
-            ans.append(a + b)
-        else:
-            ans.append(P * (M - j))
-            break
+# 前からi個の和を事前に求めておく
+l = [0] * (M + 1)
+for i, b in enumerate(B, start=1):
+    l[i] = sum(B[:i])
+print(l)
+
+# TODO: ソートしたBのどこでPを超えるかを求める
+
 
 print(sum(ans))
